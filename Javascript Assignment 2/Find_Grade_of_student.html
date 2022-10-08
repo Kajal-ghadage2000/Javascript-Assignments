@@ -1,0 +1,70 @@
+<!--
+Write a function using switch case to find the grade of a student based
+on marks obtained
+a. “S grade” if the marks are between 90 and 100.
+b. “A grade” if the marks are between 80 and 90.
+c. “B grade” if the marks are between 70 and 80.
+d. “C grade” if the marks are between 60 and 70.
+e. “D grade” if the marks are between 50 and 60.
+f. “E grade” if the marks are between 40 and 50.
+g. “Student has failed” if the marks are between 0 and 40.
+h. Else output “Invalid marks”.
+-->
+
+<!doctype html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script type="text/javascript">
+	function findGrade(){
+		var num=parseInt(document.getElementById("firstnumber").value)
+		console.log(num)
+		switch(true){
+			case ((num >= 90) && (num <= 100)):
+				alert('Student has got S grade')
+			break;
+			case (num > 80 && num <= 90):
+				alert('Student has got A grade')
+			break;
+			case (num>70 && num<=80):
+				alert('Student has got B grade')
+			break;
+			case (num>60 && num<=70):
+				alert('Student has got C grade')			
+			break;
+			case (num>50 && num<=60):
+				alert('Student has got D grade')
+			break;
+			case (num>40 && num<=50):
+				alert('Student has got E grade')
+			break;
+			case (num>=0 && num<=40):
+				alert('Student has failed')
+			break;
+			default:
+				alert('Invalid marks')
+			break;
+		}
+	}
+</script>
+</head>
+<body>
+      <div class="container">
+         <br/><br/>
+         <h2>Find the grade of a student based on marks obtained</h2>
+         <br/><br/>
+         <form method='post'>
+            <div class="form-group">
+               <label for="name">Enter your Marks</label>
+               <input type="number" class="form-control" id="firstnumber" placeholder="0" required>
+            </div>
+            <button type="submit" class="btn btn-primary" onClick="findGrade()">Submit</button>
+         </form>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

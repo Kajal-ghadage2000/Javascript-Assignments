@@ -1,0 +1,39 @@
+<!--
+Write a program to find whether a given number is armstrong number or not-
+The Armstrong number is a number that is equal to the sum of cubes of its digits. For example 0, 1, 153, 370, 371 and 407 are the Armstrong numbers. Let's try to understand why 153 is an Armstrong number.
+153 = (1*1*1)+(5*5*5)+(3*3*3) where:
+(1*1*1)=1
+(5*5*5)=125
+(3*3*3)=27
+So: 1+125+27=153
+-->
+
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+	function calArms(num){
+		var sum=0;
+		while(num>0){
+			var temp=num%10
+			num=parseInt(num/10)
+			sum+=Math.pow(temp,3)
+		}
+		return sum;
+	}
+	function findArmstrong(){
+		var num=parseInt(document.getElementById("firstnumber").value);
+		var result=calArms(num)
+		if(result===num)
+			document.getElementById("answer").innerHTML = "<u>"+ ` ${num} is armstrong number`+"</u>";
+		else
+			document.getElementById("answer").innerHTML = "<u>"+ ` ${num} is not armstrong number`+"</u>";
+	}
+</script>
+</head>
+<body>
+<p>Enter Number: <input id="firstnumber"></p>
+<button onclick="findArmstrong()">Show Result</button>
+<p id="answer"></p>
+</body>
+</html>

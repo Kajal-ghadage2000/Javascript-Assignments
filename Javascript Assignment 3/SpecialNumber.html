@@ -1,0 +1,45 @@
+<!--
+Write a program to find whether a given number is special number or not-
+If the sum of the factorial of digits of a number (N) is equal to the number itself, the number (N) is called a special number.
+eg- 145 is a special number
+Logic- 1! + 4! + 5!= 1+24+120 i.e 145
+-->
+
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+	function calSpecial(num){
+		var sum=0;
+		while(num>0){
+			var temp=num%10
+			num=parseInt(num/10)
+			sum+=calFact(temp)
+		}
+		return sum;
+	}
+	function calFact(num){
+    		if(num===0)
+    			return 1;
+    		else if(num===1)
+    			return num*1;
+    		else 
+        			return num*calFact(num-1);
+	}
+         	function findSpecial(){
+		var num=parseInt(document.getElementById("firstnumber").value);
+		var result=calSpecial(num)
+		if(result===num)
+			document.getElementById("answer").innerHTML = "<u>"+ ` ${num} is Special number`+"</u>";
+		else
+			document.getElementById("answer").innerHTML = "<u>"+ ` ${num} is not Special number`+"</u>";
+
+	}
+</script>
+</head>
+<body>
+<p>Enter Special Number: <input id="firstnumber"></p>
+<button onclick="findSpecial()">Show Result</button>
+<p id="answer"></p>
+</body>
+</html>

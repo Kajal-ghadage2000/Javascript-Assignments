@@ -1,0 +1,52 @@
+<!--
+Write a Javascript function to check whether a triangle is equilateral,isosceles or scalene
+-->
+
+<!doctype html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script type="text/javascript">
+	function findType(){
+		var num1=parseInt(document.getElementById("firstnumber").value)
+		var num2=parseInt(document.getElementById("secondnumber").value)
+		var num3=parseInt(document.getElementById("thirdnumber").value)
+		if(num1===num2 && num2===num3)
+			alert('The Given Triangle is equilateral')
+		else if(num1===num2 || num2===num3 || num3===num1)
+			alert('The given Triangle is isosceles')
+		else
+			alert('The given Triangle is scalene')
+	}
+</script>
+</head>
+<body>
+      <div class="container">
+         <br/><br/>
+         <h2>Find the type of Triangle</h2>
+         <br/>
+         <ul>
+         <li>Equilateral triangle: All three sides are equal.</li>
+         <li>Isosceles triangle: Any two sides are equal.</li>
+         <li>Scalene triangle: No sides are equal.<//li>
+         </ul>
+         <br/>
+         <form method='post'>
+            <div class="form-group">
+               <label for="firstnumber">Enter 1st side of triangle</label>
+               <input type="number" class="form-control" id="firstnumber" placeholder="0" required>
+               <label for="secondnumber">Enter 2nd side of triangle</label>
+               <input type="number" class="form-control" id="secondnumber" placeholder="0" required>
+               <label for="thirdnumber">Enter 3rd side of triangle</label>
+               <input type="number" class="form-control" id="thirdnumber" placeholder="0" required>
+            </div>
+            <button type="submit" class="btn btn-primary" onClick="findType()">Submit</button>
+         </form>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

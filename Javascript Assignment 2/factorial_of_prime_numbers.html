@@ -1,0 +1,62 @@
+<!--
+Write a program to find the factorial of all prime numbers between a given range . Range will be passed as 2 values in the function parameters. eg- if it is needed to find the values for numbers 1-100, then
+function declaration can look like - function prime(1,100).
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+      <div class="container">
+         <br/><br/>
+         <h2>Find the factorial of all prime numbers between a given range.</h2>
+         <br/><br/>
+         <form method='post'>
+            <div class="form-group">
+               <label for="name">Enter Number1</label>
+               <input type="number" class="form-control" id="firstnumber" placeholder="0" required>
+               <label for="name">Enter Number2</label>
+               <input type="number" class="form-control" id="secondnumber" placeholder="0" required>
+            </div>
+            <button type="submit" class="btn btn-primary" onClick="findPrime()">Submit</button>
+         </form>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <script type="text/javascript">
+	function findFact(num){
+		var fact=1;
+		for(var i=1; i<=num;i++){
+			fact=fact*i;
+		}
+		return fact;
+	}
+	function findPrime(){
+		var flag=0;
+		var num1=parseInt(document.getElementById("firstnumber").value)
+		var num2=parseInt(document.getElementById("secondnumber").value)
+		document.write('<h2>Prime No = factorial of prime number </h2></br></br>');
+		for(var i=num1; i<num2;i++){
+			console.log(i)
+			flag=1
+			for(var j=2; j<=i/2;j++){
+				if(i%j===0){
+				     flag=0;
+				     break;
+			}
+			}
+			if(flag==1)
+			{
+				var result=findFact(i)
+				document.write('<h3>'+ i + '  =  ' + result+"</h3>")
+			}
+		}
+	}
+</script>
+</body>
+</html>
