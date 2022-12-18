@@ -1,0 +1,45 @@
+//counter.sol
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.3;
+
+contract Counter{
+    uint count;
+    function abc() pure public returns (uint){
+        return 3+2;
+    }
+    function getCounter() public view returns (uint) {
+        return count;
+    }
+    function inc() public {
+        uint one=1;
+        count=count+one;
+    }
+    function dec() public {
+        count--;
+    }
+}
+
+//calculator.sol
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.3;
+
+contract Calculator{
+    int sum;
+    uint first_no=10;
+    uint second_number=5;
+    function getSum() public view returns (uint) {
+        return first_no+second_number;
+    }
+    function getSubstraction() public view returns (uint) {
+        return first_no-second_number;
+    }
+    function getMultiplication() public view returns (uint) {
+        return first_no*second_number;
+    }
+    function getDivision() public view returns (uint) {
+        return first_no/second_number;
+    }
+    
+}

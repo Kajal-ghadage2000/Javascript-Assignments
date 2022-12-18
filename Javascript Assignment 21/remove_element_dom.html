@@ -1,0 +1,16 @@
+<html>
+<head>
+<h2>Remove an element from the screen using js dom.</h2>
+</head>
+<body>
+    <h2 id="h2_first">H2 Tag: click button to remove</h2>
+    <button onClick="fun()">Remove Element</button>
+	
+  	<script>
+        function fun(){
+            const element = document.getElementById("h2_first");
+            element.remove();
+        }
+    </script>
+</body>
+</html>

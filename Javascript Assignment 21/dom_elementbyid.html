@@ -1,0 +1,24 @@
+<html>
+<head>
+<p>Select an h2 tag with id of text and change its inner text to “Hello World”.<br/><br/>
+Apply following style to the same h2 using Javascript DOM Method.<br/>
+colour: red,<br/>
+fontWeight: bold,<br/>
+textTransform: uppercase</p>
+</head>
+<body>
+	<h2>H2 Tag: </h2>
+	<h2 id="h2_element">Hello Kajal</h2>
+	<button onClick="changeData()">Update Page</button>
+	<script>
+		function changeData(){
+			var h2_tag=document.getElementById("h2_element")
+			h2_tag.innerHTML="Hello World";
+			h2_tag.style.color="red";
+			h2_tag.style.fontWeight="bold";
+			h2_tag.style.textTransform="uppercase";
+			//document.getElementsByTagName("h2")[0].innerHTML="Hello World";
+		}
+	</script>
+</body>
+</html>

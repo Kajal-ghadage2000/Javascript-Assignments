@@ -1,0 +1,17 @@
+<html>
+<head>
+<h1>Get the number of p tags on the screen using JS DOM.</h2>
+</head>
+<body>
+	<p>P Tag: Hello World</p>
+	<p>P Tag: Hello Javascript</p>
+	
+	<button onClick="changeData()">Update Page</button>
+	<script>
+		function changeData(){
+			var p_tag=document.querySelectorAll("p")
+			console.log("No. of P tags on page are "+p_tag.length)
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<head>
+<h2>Create a new h4 tag on the screen using JS DOM.</h2>
+</head>
+<body>
+  	<script>
+    var header = document.createElement("header");
+    var h4 = document.createElement("h4");
+    h4.textContent = "something";
+    
+    header.appendChild(h4);
+    document.body.appendChild(header);  
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+Are Higher Order functions and Call back functions the same ? If not,briefly explain about both functions.
+
+Both Higher Order functions and Call back functions are different.
+
+Higher order functions are functions that operate on other functions,
+A Higher-Order function is a function that receives a function as an argument or returns the function as output.
+Functions such as filter(),map(),reduce(),some() etc, these all are example of Higher-Order Functions
+
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+Note, however, that callbacks are often used to continue code execution after an asynchronous operation has completed these are called asynchronous callbacks. 
+A good example is the callback functions executed inside a .then() block chained onto the end of a promise after that promise fulfills or rejects. 
+This structure is used in many modern web APIs, such as fetch().
+
+The numbers function below is a higher order function that takes callback function as araguments.
+
+Example:
+function add(x, y){
+  return x + y;
+}
+function numbers(fn, x, y){
+  return fn(x, y);
+}
+var addResult = numbers(add, 3, 2);
+console.log(addResult)

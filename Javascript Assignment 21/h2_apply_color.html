@@ -1,0 +1,20 @@
+<html>
+<head>
+<h1>Select all the h2 tags on screen and change their colour to purple.</h2>
+</head>
+<body>
+	<h2>H2 Tag: </h2>
+	<h2>Hello World</h2>
+	<h2>Hello Javascript</h2>
+
+	<button onClick="changeData()">Update Page</button>
+	<script>
+		function changeData(){
+			var h2_tag=document.querySelectorAll("h2")
+			for(var i=0; i<h2_tag.length;i++){
+				h2_tag[i].style.color="purple";
+			}
+		}
+	</script>
+</body>
+</html>

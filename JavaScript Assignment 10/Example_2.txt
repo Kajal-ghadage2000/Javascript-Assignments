@@ -1,0 +1,5 @@
+Is filter a Higher Order function in Javascript ? If yes, why ?
+Yes, filter is a Higher Order function in Javascript.
+A higher order function is a function that takes one or more functions as arguments.
+Filter function takes callbackFunction as arugument, to test each element of the array. Return true to keep the element, false otherwise. 
+Therfore, filter is a Higher Order function in Javascript.
